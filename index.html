@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://oscaralmgren.github.io/">
     <meta property="og:locale" content="sv_SE">
 
-    <!-- JSON-LD: Strukturerad data för AI och sök motorer (schema.org) -->
+    <!-- JSON-LD: Strukturerad data för AI och sökmotorer (schema.org) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -44,53 +44,202 @@
       ]
     }
     </script>
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #7dd3fc;
+            --border: #334155;
+            --max-width: 680px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+        }
+
+        header p {
+            font-size: 1.125rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.975rem;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        li {
+            color: var(--text-muted);
+            font-size: 0.975rem;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.15s ease-in-out;
+            word-break: break-all;
+        }
+
+        a:hover, a:focus {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        footer p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            section {
+                padding: 1.25rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Oscar Almgren</h1>
-        <p>Lösningsarkitekt &amp; IT-konsult</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Oscar Almgren</h1>
+            <p>Lösningsarkitekt &amp; IT-konsult</p>
+        </header>
 
-    <main>
-        <section id="about">
-            <h2>Om mig</h2>
-            <p>
-                Jag arbetar som lösningsarkitekt och IT-konsult med fokus på enterprise-system, dataplattformar och modern systemintegration. 
-                På fritiden utvecklar jag projekt i bland annat Go och Flutter.
-            </p>
-        </section>
+        <main>
+            <section id="about">
+                <h2>Om mig</h2>
+                <p>
+                    Jag arbetar som lösningsarkitekt och IT-konsult med fokus på enterprise-system, dataplattformar och modern systemintegration. 
+                    På fritiden utvecklar jag projekt i bland annat Go och Flutter.
+                </p>
+            </section>
 
-        <section id="expertise">
-            <h2>Expertisområden</h2>
-            <ul>
-                <li>Lösningsarkitektur &amp; Systemintegration</li>
-                <li>Dataplattformar &amp; Semantisk webb (RDF, DCAT-AP)</li>
-                <li>Mjukvaruutveckling (Go, Flutter, Dart)</li>
-            </ul>
-        </section>
+            <section id="expertise">
+                <h2>Expertisområden</h2>
+                <ul>
+                    <li>Lösningsarkitektur &amp; Systemintegration</li>
+                    <li>Dataplattformar &amp; Semantisk webb (RDF, DCAT-AP)</li>
+                    <li>Mjukvaruutveckling (Go, Flutter, Dart)</li>
+                </ul>
+            </section>
 
-        <section id="verification">
-            <h2>Verifierade profiler &amp; sociala medier</h2>
-            <ul>
-                <li>
-                    <a rel="me" href="https://mastodon.nu/@ocken">Mastodon (@ocken@mastodon.nu)</a>
-                </li>
-                <!-- Du kan lägga till fler profiler här med rel="me" -->
-            </ul>
-        </section>
+            <section id="verification">
+                <h2>Verifierade profiler &amp; sociala medier</h2>
+                <ul>
+                    <li>
+                        <a rel="me" href="https://mastodon.nu/@ocken">Mastodon (@ocken@mastodon.nu)</a>
+                    </li>
+                </ul>
+            </section>
 
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <address>
-                <p>Webbplats: <a href="https://oscaralmgren.github.io/">oscaralmgren.github.io</a></p>
-            </address>
-        </section>
-    </main>
+            <section id="contact">
+                <h2>Kontakt</h2>
+                <address>
+                    <p>Webbplats: <a href="https://oscaralmgren.github.io/">oscaralmgren.github.io</a></p>
+                </address>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; Oscar Almgren</p>
-    </footer>
+        <footer>
+            <p>&copy; Oscar Almgren</p>
+        </footer>
+    </div>
 
 </body>
 </html>
