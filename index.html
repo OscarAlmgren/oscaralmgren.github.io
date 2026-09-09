@@ -8,6 +8,7 @@
     <!-- Meta-taggar för sökmotorer och AI-skramlare -->
     <meta name="description" content="Personlig webbplats för Oscar Almgren, Lösningsarkitekt och IT-konsult specialiserad på systemarkitektur, dataplattformar och modern mjukvaruutveckling.">
     <meta name="author" content="Oscar Almgren">
+    <meta name="color-scheme" content="dark light">
     <link rel="canonical" href="https://oscaralmgren.github.io/">
 
     <!-- Open Graph (för sociala medier och AI-sammanfattningar) -->
@@ -33,8 +34,10 @@
         "Solution Architecture",
         "System Architecture",
         "Data Platforms",
+        "Enterprise Integration",
         "Go",
         "Flutter",
+        "Dart",
         "Semantic Web",
         "RDF",
         "DCAT-AP"
@@ -43,7 +46,7 @@
         "https://mastodon.nu/@ocken",
         "https://instagram.com/oscaralmgren",
         "https://www.linkedin.com/in/oscaralmgren/",
-        "https://x.com/ocken"
+        "https://github.com/OscarAlmgren"
       ]
     }
     </script>
@@ -58,6 +61,18 @@
             --accent-hover: #7dd3fc;
             --border: #334155;
             --max-width: 680px;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --card-bg: #f1f5f9;
+                --text-main: #0f172a;
+                --text-muted: #475569;
+                --accent: #0284c7;
+                --accent-hover: #0369a1;
+                --border: #cbd5e1;
+            }
         }
 
         * {
@@ -77,6 +92,23 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .skip-to-main {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: var(--bg-color);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0 0 0.5rem 0;
+            font-weight: 500;
+        }
+
+        .skip-to-main:focus {
+            top: 0;
         }
 
         .container {
@@ -127,6 +159,11 @@
         p {
             color: var(--text-muted);
             font-size: 0.975rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
         }
 
         ul {
@@ -151,6 +188,32 @@
             left: 0;
         }
 
+        .project-item {
+            margin-bottom: 1rem;
+        }
+
+        .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+        }
+
+        .project-description {
+            font-size: 0.925rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+        }
+
         address {
             font-style: normal;
         }
@@ -159,12 +222,18 @@
             color: var(--accent);
             text-decoration: none;
             transition: color 0.15s ease-in-out;
-            word-break: break-all;
+            word-break: break-word;
         }
 
         a:hover, a:focus {
             color: var(--accent-hover);
             text-decoration: underline;
+            outline: 2px solid transparent;
+        }
+
+        a:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
         }
 
         footer {
@@ -193,10 +262,17 @@
             section {
                 padding: 1.25rem;
             }
+
+            .project-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <a href="#main" class="skip-to-main">Hoppa till innehåll</a>
 
     <div class="container">
         <header>
@@ -204,22 +280,32 @@
             <p>Lösningsarkitekt &amp; IT-konsult</p>
         </header>
 
-        <main>
+        <main id="main">
             <section id="about">
                 <h2>Om mig</h2>
                 <p>
                     Jag arbetar som lösningsarkitekt och IT-konsult med fokus på enterprise-system, dataplattformar och modern systemintegration. 
-                    På fritiden utvecklar jag projekt i bland annat Go och Flutter.
+                    Jag specialiserar mig på att designa skalbara lösningar för komplexa organisatoriska behov.
+                </p>
+                <p>
+                    På fritiden utvecklar jag projekt i bland annat Go och Flutter, och intresserar mig särskilt för semantisk webb och öppen data.
                 </p>
             </section>
 
             <section id="expertise">
                 <h2>Expertisområden</h2>
                 <ul>
-                    <li>Lösningsarkitektur &amp; Systemintegration</li>
+                    <li>Lösningsarkitektur &amp; Enterprise-integration</li>
+                    <li>Systemarkitektur &amp; Systemdesign</li>
                     <li>Dataplattformar &amp; Semantisk webb (RDF, DCAT-AP)</li>
                     <li>Mjukvaruutveckling (Go, Flutter, Dart)</li>
+                    <li>Molnlösningar &amp; DevOps</li>
                 </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Projekt &amp; Bidrag</h2>
+                <p>Se mina projekt och bidrag på <a href="https://github.com/OscarAlmgren">GitHub</a> för exempel på kod inom Go, Flutter och systemarkitektur.</p>
             </section>
 
             <section id="verification">
@@ -229,13 +315,13 @@
                         <a rel="me" href="https://mastodon.nu/@ocken">Mastodon (@ocken@mastodon.nu)</a>
                     </li>
                     <li>
-                        <a rel="me" href="https://instagram.com/oscaralmgren">Instagram (@oscaralmgren)</a>
+                        <a rel="me" href="https://github.com/OscarAlmgren">GitHub (@OscarAlmgren)</a>
                     </li>
                     <li>
                         <a rel="me" href="https://www.linkedin.com/in/oscaralmgren/">LinkedIn (oscaralmgren)</a>
                     </li>
                     <li>
-                        <a rel="me" href="https://x.com/ocken">X/Twitter (@ocken)</a>
+                        <a rel="me" href="https://instagram.com/oscaralmgren">Instagram (@oscaralmgren)</a>
                     </li>
                 </ul>
             </section>
@@ -243,7 +329,9 @@
             <section id="contact">
                 <h2>Kontakt</h2>
                 <address>
-                    <p>Webbplats: <a href="https://oscaralmgren.github.io/">oscaralmgren.github.io</a></p>
+                    <p><strong>Webbplats:</strong> <a href="https://oscaralmgren.github.io/">oscaralmgren.github.io</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/OscarAlmgren">github.com/OscarAlmgren</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/oscaralmgren/">linkedin.com/in/oscaralmgren</a></p>
                 </address>
             </section>
         </main>
