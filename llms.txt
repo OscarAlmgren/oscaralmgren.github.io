@@ -3,15 +3,20 @@
 > Lösningsarkitekt och IT-konsult med fokus på enterprise-system, dataplattformar och systemintegration.
 
 ## Om mig
-Oscar Almgren är en svensk lösningsarkitekt och IT-konsult. Han arbetar med storskalig systemarkitektur, dataplattformar och semantiska webbstandarder, samt bygger egna projekt i Go och Flutter.
+Oscar Almgren är en svensk lösningsarkitekt och IT-konsult specialiserad på storskalig systemarkitektur, dataplattformar och semantiska webbstandarder. Han arbetar med att designa och implementera robusta enterprise-lösningar och bygger egna projekt i Go och Flutter.
 
 ## Expertis
-- Lösningsarkitektur och enterprise-integration
-- Semantisk webb, RDF, DCAT-AP
-- Programmering i Go och Flutter/Dart
+- **Lösningsarkitektur**: Enterprise-integration, storskalig systemarkitektur, API-design, systemintegrering
+- **Dataplattformar**: Data governance, pipeline-arkitektur, datamodellering, master data management
+- **Semantisk webb**: RDF, DCAT-AP, linked data, ontologi-design, webbstandarder
+- **Programmering**: Go, Flutter/Dart, systemutveckling
+
+## Tjänster & Fokus
+Oscar erbjuder konsultation inom lösningsarkitektur, systemintegration och dataplattformar för medelstora till större organisationer. Han är särskilt intresserad av projekt som kombinerar arkitektonisk excellens med moderna webbstandarder.
 
 ## Verifierade länkar
+- GitHub: https://github.com/OscarAlmgren
 - Mastodon: https://mastodon.nu/@ocken
-- Webbplats: https://oscaralmgren.github.io/
 - LinkedIn: https://www.linkedin.com/in/oscaralmgren/
 - X/Twitter: https://x.com/ocken
+- Webbplats: https://oscaralmgren.github.io/
